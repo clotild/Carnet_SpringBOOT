@@ -1,9 +1,6 @@
 package com.example.carnet.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -15,7 +12,25 @@ public class Contact {
     private String username;
     private String email;
     private String phoneNumber;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+    public Contact () {
 
+    }
+
+    public Contact(String username, String email, String phoneNumber) {
+        this.username = username;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+//    public Contact(long id, String username, String email, String phoneNumber) {
+//        this.id = id;
+//        this.username = username;
+//        this.email = email;
+//        this.phoneNumber = phoneNumber;
+//    }
 
     public long getId() {
         return id;

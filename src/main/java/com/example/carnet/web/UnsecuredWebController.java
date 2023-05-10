@@ -1,4 +1,4 @@
-package com.example.carnet.api;
+package com.example.carnet.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

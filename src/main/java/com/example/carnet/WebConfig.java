@@ -1,4 +1,4 @@
-package com.example.carnet.api;
+package com.example.carnet;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
